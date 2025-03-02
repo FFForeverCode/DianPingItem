@@ -15,7 +15,7 @@ import java.util.List;
  * @since 2021-12-22
  */
 public interface IVoucherOrderService extends IService<VoucherOrder> {
-    Result getOrder(Long voucherId);
+    Result getOrder(Long voucherId) throws InterruptedException;
 
     List<VoucherOrder> IfAbsent(Long id, Long voucherId);
 
