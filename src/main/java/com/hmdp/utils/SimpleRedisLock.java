@@ -83,11 +83,11 @@ public class SimpleRedisLock implements ILock{
         //调用lua脚本 实现校验+删除 原子性操作
         String key = getKey(lockName);
         String threadId = ID_PRE+Thread.currentThread().getId();
-        redisTemplate.execute(
+       redisTemplate.execute(
                 UNLOCK_SCRIPT,
                 Collections.singletonList(key),//传入keys
                 threadId//传入Argv
-                );
+        );
     }
 
     public String getKey(String key){

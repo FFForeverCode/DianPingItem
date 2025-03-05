@@ -31,6 +31,10 @@ public class CacheUtil {
         String Json = JSONUtil.toJsonStr(value);
         redisTemplate.opsForValue().set(key,Json,time,unit);
     }
+    public void set(String key, Object value){
+        String Json = JSONUtil.toJsonStr(value);
+        redisTemplate.opsForValue().set(key,Json);
+    }
 
     /**
      * 保存数据并设置逻辑时间

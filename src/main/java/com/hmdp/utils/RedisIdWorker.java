@@ -39,9 +39,4 @@ public class RedisIdWorker {
         return timeStamp << COUNT_BITS | count;
     }
 
-    public static void main(String[] args) {
-        LocalDateTime time = LocalDateTime.of(2025, 2, 13, 0, 0);
-        long epochSecond = time.toEpochSecond(ZoneOffset.UTC);
-        System.out.println(epochSecond);
-    }
 }

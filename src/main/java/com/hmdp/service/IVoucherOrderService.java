@@ -19,5 +19,6 @@ public interface IVoucherOrderService extends IService<VoucherOrder> {
 
     List<VoucherOrder> IfAbsent(Long id, Long voucherId);
 
-    Result createVoucher(Long voucherId);
+    void createVoucher(VoucherOrder order);
+    Result seckillVoucher(Long voucherId);
 }

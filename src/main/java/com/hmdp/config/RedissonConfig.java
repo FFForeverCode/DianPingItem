@@ -29,7 +29,7 @@ public class RedissonConfig {
         //redisson配置
         Config config = new Config();
         //设置地址、密码
-        config.useSingleServer().setAddress("redis://192.168.0.0.1:6379");
+        config.useSingleServer().setAddress("redis://127.0.0.1:6379");
         //返回客户端
         return Redisson.create(config);
     }
