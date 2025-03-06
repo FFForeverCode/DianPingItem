@@ -29,7 +29,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
                                     "/shop/**",
                                     "/shop-type/**",
                                     "/voucher/**",
-                                    "upload/**"
+                                    "/upload/**"
                 )
                 .order(1);//顺序
         //该拦截器先执行
